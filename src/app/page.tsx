@@ -11,17 +11,19 @@ const Home = () => {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center bg-black/50 h-screen">
+      <main className="flex flex-col items-center justify-center bg-neutral-200 h-screen">
         <div className="text-3xl font-extrabold text-[#F5B62B] mb-4">
-          JOGADAS: <span className="text-gray-300">{moves}</span>
+          JOGADAS: <span className="text-gray-400">{moves}</span>
         </div>
         <div className="grid grid-cols-6 gap-3">
           {listOfCards.map(card => (
             <div
               key={card.id}
               className={classNames(
-                'flex items-center justify-center w-20 h-20 bg-black/50 rounded cursor-pointer shadow',
-                { 'bg-gray-400 cursor-not-allowed': card.visibility }
+                'flex items-center justify-center w-20 h-20 bg-neutral-600 rounded cursor-pointer shadow-md',
+                {
+                  'bg-neutral-300 cursor-not-allowed shadow-md': card.visibility
+                }
               )}
               onClick={() => {
                 handleCheckPair(card, card.visibility);
