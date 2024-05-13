@@ -22,7 +22,7 @@ const Home = () => {
               className={classNames(
                 'flex items-center justify-center w-20 h-20 bg-neutral-600 rounded cursor-pointer shadow-md',
                 {
-                  'bg-neutral-300 cursor-not-allowed shadow-md': card.visibility
+                  'bg-neutral-100 cursor-not-allowed': card.visibility
                 }
               )}
               onClick={() => {
