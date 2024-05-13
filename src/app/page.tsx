@@ -3,7 +3,6 @@
 import useMemoryGame from '@/hooks/useGame';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { IoEye } from 'react-icons/io5';
 
 const Home = () => {
   const { moves, begin, listOfCards, playGame, gameReset, handleCheckPair } =
@@ -39,7 +38,6 @@ const Home = () => {
                 />
               ) : (
                 <span>
-                  <IoEye size={40} className="text-white hidden" />
                   <Image
                     src="/fun.png"
                     alt={card.pair}
