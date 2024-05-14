@@ -19,17 +19,21 @@ const Home = () => {
             <div
               key={card.id}
               className={classNames(
-                'flex items-center justify-center w-20 h-20 bg-neutral-400 rounded cursor-pointer shadow-md transition-all duration-500 hover:scale-95',
+                `flex items-center justify-center w-20 h-20
+                bg-purple-500 rounded cursor-pointer
+                shadow-md shadow-black/40
+                [transform-style:preserve-3d] duration-1000 delay-[var(--delay)]
+                `,
                 {
-                  'bg-purple-500 cursor-not-allowed hover:scale-100':
-                    card.visibility
+                  'cursor-not-allowed [transform-style:preserve-3d] [transform:rotateY(180deg)] duration-1000 delay-[var(--delay)]':
+                    !card.visibility
                 }
               )}
               onClick={() => {
                 handleCheckPair(card, card.visibility);
               }}
             >
-              {card.visibility === true ? (
+              <div className="flex items-center justify-center w-20 h-20 duration-1000 delay-[var(--delay)]">
                 <Image
                   src={`/${card.image}`}
                   alt={card.pair}
@@ -37,7 +41,8 @@ const Home = () => {
                   height={48}
                   priority
                 />
-              ) : (
+              </div>
+              <div className="flex items-center justify-center w-20 h-20  rounded absolute inset-0 bg-blue-500 [transform:rotateY(180deg)] [backface-visibility:hidden] duration-1000 delay-[var(--delay)]">
                 <span>
                   <Image
                     src="/fun.png"
@@ -46,8 +51,7 @@ const Home = () => {
                     height={40}
                   />
                 </span>
-              )}
-              {card.visibility}
+              </div>
             </div>
           ))}
         </div>
