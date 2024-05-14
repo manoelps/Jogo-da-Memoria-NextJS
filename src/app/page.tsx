@@ -14,7 +14,7 @@ const Home = () => {
         <div className="text-3xl font-extrabold text-[#F5B62B] mb-4">
           JOGADAS: <span className="text-gray-400">{moves}</span>
         </div>
-        <div className="grid grid-cols-6 gap-3">
+        <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6">
           {listOfCards.map(card => (
             <div
               key={card.id}
