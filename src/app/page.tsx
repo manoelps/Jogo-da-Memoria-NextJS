@@ -19,9 +19,9 @@ const Home = () => {
             <div
               key={card.id}
               className={classNames(
-                'flex items-center justify-center w-20 h-20 bg-neutral-600 rounded cursor-pointer shadow-md transition-all duration-500 hover:scale-95',
+                'flex items-center justify-center w-20 h-20 bg-neutral-400 rounded cursor-pointer shadow-md transition-all duration-500 hover:scale-95',
                 {
-                  'bg-neutral-100 cursor-not-allowed hover:scale-100':
+                  'bg-purple-500 cursor-not-allowed hover:scale-100':
                     card.visibility
                 }
               )}
@@ -47,6 +47,7 @@ const Home = () => {
                   />
                 </span>
               )}
+              {card.visibility}
             </div>
           ))}
         </div>
