@@ -20,8 +20,8 @@ Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o
 
 ##
 
-![alt text](image.png)
+![alt text](images-git/image.png)
 
-![alt text](image-1.png)
+![alt text](images-git/image-1.png)
 
-![alt text](image-2.png)
+![alt text](images-git/image-2.png)
