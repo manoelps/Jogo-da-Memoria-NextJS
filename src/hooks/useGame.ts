@@ -78,7 +78,7 @@ const useMemoryGame = () => {
           resetViewCard(compare);
           setCompare([]);
           setWaiting(false); // diz que nao precisa mais esperar
-        }, 500);
+        }, 900);
       }
     }
   }, [quantityChoice]);
