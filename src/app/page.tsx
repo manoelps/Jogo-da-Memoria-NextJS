@@ -10,11 +10,11 @@ const Home = () => {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center bg-neutral-200 h-screen">
-        <div className="text-3xl font-extrabold text-[#F5B62B] mb-4">
+      <main className="flex flex-col items-center justify-center bg-neutral-200 h-screen gap-4">
+        <div className="text-3xl font-extrabold text-[#F5B62B]">
           JOGADAS: <span className="text-gray-400">{moves}</span>
         </div>
-        <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6">
+        <div className="grid grid-cols-4 gap-1.5 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6">
           {listOfCards.map(card => (
             <div
               key={card.id}
